@@ -23,11 +23,11 @@ const debug = require("debug")("app:db");
 
 const app = express();
 
-var corsOptions = {
-  origin: "http://localhost",
-};
+// var corsOptions = {
+//   origin: "http://localhost",
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.use(helmet());
 
