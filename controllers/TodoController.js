@@ -3,9 +3,9 @@ const express = require("express");
 const todoModel = require('../models/todo');
 
 module.exports = {
-     async index(req, res) { 
+  async index(req, res) { 
     try {
-        const todos = await todoModel.find({owner: req.body.owner});
+        const todos = await todoModel.find({owner: req.query.owner});
         return res.status(200).json({
           status: true,
           data: todos,
