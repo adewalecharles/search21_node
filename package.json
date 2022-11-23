@@ -31,7 +31,6 @@
   "name": "search21_node",
   "version": "1.0.0",
   "description": "a simple todo api service",
-  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/adewalecharles/search21_node.git"
