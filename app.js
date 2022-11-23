@@ -7,6 +7,7 @@ require('./util/database');
 
 const todoRoutes = require("./routes/todo");
 const authRoutes = require("./routes/auth");
+
 /**
  * morgan logs every http request by default to the console .. you can set it to log to a file instead
  */
@@ -14,12 +15,12 @@ const logger = require("morgan");
 /**
  * helmet is a middleware that adds and removes some headers for adding more security
  */
-const helmet = require("helmet");
+// const helmet = require("helmet");
 /**
  * const debug = require("debug")("app:log"); // You are free to name the debug namespace as you like
  * +0ms is time spent from the last debug message
  */
-const debug = require("debug")("app:db");
+// const debug = require("debug")("app:db");
 
 const app = express();
 
@@ -29,7 +30,7 @@ const app = express();
 
 // app.use(cors(corsOptions));
 
-app.use(helmet());
+// app.use(helmet());
 
 
 if (process.env.NODE_ENV !== "production") app.use(logger("dev"));
@@ -40,7 +41,7 @@ app.use(cookieParser());
 
 
 app.get('/', function(req, res, next)  {
-  res.json({ status: true, message: "Welcome To ToDo API" });
+  return res.status(200).json({ status: true, message: "Welcome To ToDo API" });
 });
 
 app.use('/api/v1/todos', todoRoutes);
