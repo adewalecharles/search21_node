@@ -1,0 +1,49 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.2",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "debug": "^2.6.9",
+    "dotenv": "^8.2.0",
+    "helmet": "^3.21.3",
+    "jsdoc": "^3.6.3",
+    "kue": "^0.11.6",
+    "mocha": "^7.1.0",
+    "moment": "^2.24.0",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "mocha"
+  },
+  "name": "search21_node",
+  "version": "1.0.0",
+  "description": "a simple todo api service",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/adewalecharles/search21_node.git"
+  },
+  "keywords": [
+    "node",
+    "todo"
+  ],
+  "author": "adewalecharles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adewalecharles/search21_node/issues"
+  },
+  "homepage": "https://github.com/adewalecharles/search21_node#readme"
+}
