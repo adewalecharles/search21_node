@@ -42,12 +42,11 @@ module.exports = {
 },
 
  async create(req, res) {
-    const {title, content,owner} = req.body
+    const {title,owner} = req.body
 
     try {
         const todo = await todoModel.create({
           title: title,
-          content: content,
           owner:owner
         });
 
@@ -67,14 +66,12 @@ module.exports = {
 
 
     try {
-        const { title, content } = req.body;
+        const { title } = req.body;
         const todo = await todoModel.findOneAndUpdate(
           { id: req.params.todoID },
 
           {
             title: title,
-            content: content,
-            owner:owner
           },
           { new: true }
         );
